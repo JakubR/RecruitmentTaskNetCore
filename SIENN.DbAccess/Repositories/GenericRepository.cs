@@ -6,9 +6,9 @@ using System.Linq.Expressions;
 
 namespace SIENN.DbAccess.Repositories
 {
-    public abstract class GenericRepository<TEntity> : IGenericRepository<TEntity> where TEntity : class
+    public abstract class GenericRepository<TEntity> where TEntity : class
     {
-        protected GenericRepository(DbContext context)
+        protected GenericRepository(SiennDbContext context)
         {
             _context = context;
             _entities = context.Set<TEntity>();
@@ -55,6 +55,17 @@ namespace SIENN.DbAccess.Repositories
         }
 
         private DbSet<TEntity> _entities;
-        private DbContext _context;
+        protected DbContext _context;
+
+        protected IQueryable<TEntity> InternalGetData(Expression<Func<TEntity, bool>> predicate,
+            params Expression<Func<TEntity, object>>[] includeProperties)
+        {
+            IQueryable<TEntity> query = _context.Set<TEntity>().Where(predicate);
+            foreach (var includeProperty in includeProperties)
+            {
+                query = query.Include(includeProperty);
+            }
+            return query;
+        }
     }
 }

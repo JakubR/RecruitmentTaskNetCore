@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using System;
+using System.IO;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -17,6 +19,7 @@ namespace SIENN.WebApi
 
         public void ConfigureServices(IServiceCollection services)
         {
+            DependecyRegistration.Register(services, Configuration);
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new Info
@@ -24,8 +27,11 @@ namespace SIENN.WebApi
                     Version = "v1",
                     Title = "SIENN Recruitment API"
                 });
-            });
-
+                var basePath = AppContext.BaseDirectory;
+                var xmlPath = Path.Combine(basePath, "SIENN.WebApi.xml");
+                c.IncludeXmlComments(xmlPath);
+            });            
+                
             services.AddMvc();
         }
 

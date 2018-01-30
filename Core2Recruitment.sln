@@ -1,13 +1,19 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27004.2002
+VisualStudioVersion = 15.0.27004.2008
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SIENN.DbAccess", "SIENN.DbAccess\SIENN.DbAccess.csproj", "{511A3059-5C43-4767-BE20-8781E87BAAD5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SIENN.DbAccess", "SIENN.DbAccess\SIENN.DbAccess.csproj", "{511A3059-5C43-4767-BE20-8781E87BAAD5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SIENN.Services", "SIENN.Services\SIENN.Services.csproj", "{1B5848CF-2A71-45B8-9877-6D30B844AE3A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SIENN.Services", "SIENN.Services\SIENN.Services.csproj", "{1B5848CF-2A71-45B8-9877-6D30B844AE3A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SIENN.WebApi", "SIENN.WebApi\SIENN.WebApi.csproj", "{369B5334-A06E-4766-941F-3043B62DC1D6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SIENN.WebApi", "SIENN.WebApi\SIENN.WebApi.csproj", "{369B5334-A06E-4766-941F-3043B62DC1D6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SIENN.Services.Test", "SIENN.Services.Test\SIENN.Services.Test.csproj", "{0D85E439-1BED-49A3-9201-EF59C49BCDE9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SIENN.Domain", "SIENN.Domain\SIENN.Domain.csproj", "{6331087A-5924-44B6-B261-5E0704D35DCA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SIENN.WebApi.Test", "SIENN.WebApi.Test\SIENN.WebApi.Test.csproj", "{257394D0-AC6D-4A4C-BF04-005C0025EA53}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +33,18 @@ Global
 		{369B5334-A06E-4766-941F-3043B62DC1D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{369B5334-A06E-4766-941F-3043B62DC1D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{369B5334-A06E-4766-941F-3043B62DC1D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D85E439-1BED-49A3-9201-EF59C49BCDE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D85E439-1BED-49A3-9201-EF59C49BCDE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D85E439-1BED-49A3-9201-EF59C49BCDE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D85E439-1BED-49A3-9201-EF59C49BCDE9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6331087A-5924-44B6-B261-5E0704D35DCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6331087A-5924-44B6-B261-5E0704D35DCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6331087A-5924-44B6-B261-5E0704D35DCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6331087A-5924-44B6-B261-5E0704D35DCA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{257394D0-AC6D-4A4C-BF04-005C0025EA53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{257394D0-AC6D-4A4C-BF04-005C0025EA53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{257394D0-AC6D-4A4C-BF04-005C0025EA53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{257394D0-AC6D-4A4C-BF04-005C0025EA53}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
